@@ -1,47 +1,37 @@
-/**
- * Resika
- * https://github.com/facebook/react-native
- * @flow
- */
- 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Button,
-  Text, TextInput,
-  View
-} from 'react-native';
- 
-export default class HitungLuasSegitiga extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      alas:"Ibnu Putra Ardiansyah",
-      tinggi:"15",
-      luas:"XI RPL 4"
-    };
-  }
- 
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View, AppRegistry, Image} from 'react-native';
+
+type Props = {};
+export default class App extends Component<Props> {
   render() {
-    return (  
-      <View style = {{flex:1,backgroundColor:'#bbdefb'}}>
- 
-        <View style={{backgroundColor:'#2196f3'}}>
-           <Text style = {{padding: 10, fontSize: 20, color: 'white', textAlign:'center'}} >
-            Data Diriku
-          </Text>
-         </View>
- 
-        <View style={{margin:20, backgroundColor:'#90caf9'}}>
-          <Text style = {{padding: 10, fontSize: 20}} >
-              Nama 	   	:  {this.state.alas} {"\n"}
-              Nomor			 :  {this.state.tinggi} {"\n"}
-              Kelas 			  : {this.state.luas}
-          </Text>
-         </View>
-   </View> 
+    return (
+      <View style={styles.container}>
+        <Text style={styles.judul}>Data Diriku</Text>
+        <Text style={styles.tulis}>Nama : Ibnu Putra Ardiansyah</Text>
+		<Text style={styles.tulis}>No : 15</Text>
+		<Text style={styles.tulis}>Kelas : XI RPL 4</Text>
+		<Image source={require('./img.jpg')} style={{width: 320, height: 406}}/>
+      </View>
     );
   }
 }
-AppRegistry.registerComponent('AppForm2', () => HitungLuasSegitiga);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  judul: {
+    fontSize: 36,
+    textAlign: 'center',
+    margin: 10,
+  },
+  tulis: {
+	fontSize: 24,
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
