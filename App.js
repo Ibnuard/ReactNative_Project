@@ -10,7 +10,7 @@ export default class App extends Component<Props> {
         <Text style={styles.tulis}>Nama : Ibnu Putra Ardiansyah</Text>
 		<Text style={styles.tulis}>No : 15</Text>
 		<Text style={styles.tulis}>Kelas : XI RPL 4</Text>
-		<Image source={require('./img.jpg')} style={{width: 320, height: 406}}/>
+		<Image source={require('./img0.jpg')} style={{width: 320, height: 406}}/>
       </View>
     );
   }
