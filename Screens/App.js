@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, AppRegistry, Image} from 'react-native';
-import Judul from './Components/Judul';
-import { createStackNavigator } from 'react-navigation';
+import Judul from '../Components/Judul';
 
 type Props = {};
-export default class ProfilePage extends Component<Props> {
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -15,7 +14,7 @@ export default class ProfilePage extends Component<Props> {
         <Text style={styles.tulis}>Nama : Ibnu Putra Ardiansyah</Text>
 		<Text style={styles.tulis}>No : 15</Text>
 		<Text style={styles.tulis}>Kelas : XI RPL 4</Text>
-		<Image source={require('./img0.jpg')} style={{width: 340, height: 433}}/>
+		<Image source={require('../img0.jpg')} style={{width: 340, height: 433}}/>
       </View>
     );
   }
